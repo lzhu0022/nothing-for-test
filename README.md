@@ -14,7 +14,7 @@ The objective for this project is to classify the laterality (left or right side
 * TensorFlow 2.3
 
 
-##Data Split:
+## Data Split:
 
 There are over 20000 original images available labelled into two categories: left and right. The dataset is split into training set and test set with the ratio of 8:2.
 
@@ -27,6 +27,10 @@ Inception V3 by Google is the 3rd version in a series of Deep Learning Convoluti
 * Un-freeze the top layers of the model
 
 ## Example outputs:
+
+
+
+
 
 
 
