@@ -22,7 +22,19 @@ There are over 20000 original images available labelled into two categories: lef
 
 ## Algorithm: 
 
-Inception V3 by Google is the 3rd version in a series of Deep Learning Convolutional Architectures. Inception V3 was trained using a dataset of 1,000 classes from the original ImageNet dataset which was trained with over 1 million training images. In the project, on top of the Inception 3 base model, there are a list of fine-tunings that are specific to the project:
+Inception V3 by Google is the 3rd version in a series of Deep Learning Convolutional Architectures. Inception V3 was trained using a dataset of 1,000 classes from the original ImageNet dataset which was trained with over 1 million training images. On top of the Inception 3 base model, I use the principle of transfer learning. The intuition behind transfer learning for image classification is that if a model is trained on a large and general enough dataset, this model will effectively serve as a generic model of the visual world. In the project, I take advantage of these learned feature maps without having to start from scratch by training a large model on a large dataset.
+
+I followed the general machine learning workflow.
+
+* Examine and understand the data
+* Build an input pipeline, in this case using Keras ImageDataGenerator
+* Compose the model
+* Load in the pretrained base model (and pretrained weights)
+* Stack the classification layers on top
+* Train the model
+* Evaluate model
+
+Here are a list of fine-tunings that are specific to the project:
 
 * Data Augmentation
 * Image data pre-processing
